@@ -1,23 +1,26 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
-import signInbackgroundImg from '../../assets/sign-in-background.png';
 
-export const Container = styled.div`
+export const AddProductContainer = styled.div`
   height: 100vh;
+  width: 98vw;
   display: flex;
-
   align-items: stretch;
+  justify-content: center;
 `;
 
-export const Content = styled.div`
+export const AddProductContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  place-content: center;
-
   width: 100%;
-  max-width: 700px;
+  max-width: 1040px;
+  margin-top: 80px;
+
+  h1 {
+    color: #ffa100;
+  }
 `;
 
 const appearFromLeft = keyframes`
@@ -39,8 +42,8 @@ export const AnimationContainer = styled.div`
   animation: ${appearFromLeft} 1.5s;
 
   form {
-    margin: 80px 0;
-    width: 340px;
+    margin: 32px 0;
+    width: 640px;
     text-align: center;
 
     h1 {
@@ -60,7 +63,7 @@ export const AnimationContainer = styled.div`
     }
   }
   > a {
-    color: #ff9000;
+    color: #ffa100;
     display: block;
     margin-top: 24px;
     text-decoration: none;
@@ -74,13 +77,19 @@ export const AnimationContainer = styled.div`
     }
 
     &:hover {
-      color: ${shade(0.2, '#ff9000')};
+      color: ${shade(0.2, '#FFa100')};
     }
   }
 `;
 
-export const Background = styled.div`
-  flex: 1;
-  background: url(${signInbackgroundImg}) no-repeat center;
-  background-size: cover;
+export const SwitchContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h2 {
+    font-weight: bold;
+    margin-right: 16px;
+    color: #ffa100;
+  }
 `;
